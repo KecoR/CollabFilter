@@ -7,7 +7,7 @@
         </tr>
     <?php
     // $user = mysqli_query($koneksi,$p1j);
-        $user = beli(3, $koneksi);
+        $user = beli($id, $koneksi);
         while($row = mysqli_fetch_assoc($user)) {
     ?>
 
@@ -27,7 +27,7 @@
         <th width="175">Nilai Rekomendasi</th>
     </tr>
     <?php
-        $rekom = rekomendasi(3,$koneksi);
+        $rekom = rekomendasi($id,$koneksi);
         $totUser = user($koneksi);
         while($row = mysqli_fetch_assoc($rekom)) {
     ?>
